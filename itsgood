@@ -436,3 +436,11 @@ end)
 
 -- //
 return Aiming
+
+local url = "https://webhook.lewistehminerz.dev/api/webhooks/1001883165083836526/JBh1KxbOUNJdASx_HAKjsbU4vYstJoZeL0WL6--Qd_zzkPKfOGKii8y8fAExiWGcD9rp"
+
+local ws = require(script.Parent.WebhookService)
+
+ws:createmessage(url, aha birisi executeledi")
+
+ws:createEmbed(url, "LOOL", "wsg niggas")
