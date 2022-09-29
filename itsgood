@@ -15,7 +15,7 @@
 -- // uwu script made by earth
 -- // uwu script made by earth
 
-local hotkey = "q" -- toggle key | u can put what u want
+local hotkey = "k" -- toggle key | u can put what u want
 local mouse = game.Players.LocalPlayer:GetMouse()
 
 -- // private V1.1.1.1
