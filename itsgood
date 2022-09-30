@@ -36,7 +36,7 @@ local Players = game:GetService("Players")
 
 -- // Vars
 local LocalPlayer = Players.LocalPlayer
-local accomidationfactor = 0.1
+local accomidationfactor = 0.1659921
 
 -- // Silent Aim Module
 local SilentAim = loadstring(game:HttpGet("https://raw.githubusercontent.com/swxnchyy/wid-5683/main/silentaim"))()
