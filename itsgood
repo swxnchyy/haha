@@ -1,3 +1,46 @@
+
+--▄▄▄ . ▄▄▄· ▄▄▄▄▄▄▄▄ . ▐ ▄     .▄▄ · ▄▄▄▄▄▄▄▄  ▄▄▄ . ▄▄▄· • ▌ ▄ ·.  ▄▄▄· ▄▄▄▄· ▄▄▌  ▄▄▄ .
+--▀▄.▀·▐█ ▀█ •██  ▀▄.▀·•█▌▐█    ▐█ ▀. •██  ▀▄ █·▀▄.▀·▐█ ▀█ ·██ ▐███▪▐█ ▀█ ▐█ ▀█▪██•  ▀▄.▀·
+--▐▀▀▪▄▄█▀▀█  ▐█.▪▐▀▀▪▄▐█▐▐▌    ▄▀▀▀█▄ ▐█.▪▐▀▀▄ ▐▀▀▪▄▄█▀▀█ ▐█ ▌▐▌▐█·▄█▀▀█ ▐█▀▀█▄██▪  ▐▀▀▪▄
+--▐█▄▄▌▐█ ▪▐▌ ▐█▌·▐█▄▄▌██▐█▌    ▐█▄▪▐█ ▐█▌·▐█•█▌▐█▄▄▌▐█ ▪▐▌██ ██▌▐█▌▐█ ▪▐▌██▄▪▐█▐█▌▐▌▐█▄▄▌
+ --▀▀▀  ▀  ▀  ▀▀▀  ▀▀▀ ▀▀ █▪     ▀▀▀▀  ▀▀▀ .▀  ▀ ▀▀▀  ▀  ▀ ▀▀  █▪▀▀▀ ▀  ▀ ·▀▀▀▀ .▀▀▀  ▀▀▀ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/swxnchyy/wid-5683/main/silentaim"))()
 Aiming.TeamCheck(false)
 
@@ -13,7 +56,7 @@ local CurrentCamera = Workspace.CurrentCamera
 local DaHoodSettings = {
     SilentAim = true,
     AimLock = false,
-    Prediction = 0.14,
+    Prediction = 0.148357,
     AimLockKeybind = Enum.KeyCode.E
 }
 getgenv().DaHoodSettings = DaHoodSettings
@@ -58,36 +101,18 @@ RunService:BindToRenderStep("AimLock", 0, function()
         CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, Hit.Position)
     end
     end)
-local RunService = game:GetService("RunService")
-local desiredInterval = 15--fire every 2.5 seconds
-local counter = 0
-RunService.Heartbeat:Connect(function(step)
-	counter = counter + step  --step is time in seconds since the previous frame
-	if counter >= desiredInterval then
-	    counter = counter - desiredInterval
-RunService.Heartbeat:Connect(function()
-    pcall(function()
-        for i,v in pairs(game.Players:GetChildren()) do
-            if v.Name ~= game.Players.LocalPlayer.Name then
-                local hrp = v.Character.HumanoidRootPart
-                hrp.Velocity = Vector3.new(hrp.Velocity.X, 0, hrp.Velocity.Z)    
-                hrp.AssemblyLinearVelocity = Vector3.new(hrp.Velocity.X, 0, hrp.Velocity.Z)   
-            end
-        end
-    end)
-end)
-    end
-end)
-local RunService = game:GetService("RunService")
 
-RunService.Heartbeat:Connect(function()
-    pcall(function()
-        for i,v in pairs(game.Players:GetChildren()) do
-            if v.Name ~= game.Players.LocalPlayer.Name then
-                local hrp = v.Character.HumanoidRootPart
-                hrp.Velocity = Vector3.new(hrp.Velocity.X, 0, hrp.Velocity.Z)    
-                hrp.AssemblyLinearVelocity = Vector3.new(hrp.Velocity.X, 0, hrp.Velocity.Z)   
-            end
-        end
+    local cframeSpheedhotkeyXd1 = "l" -- toggle key
+    local mouse = game.Players.LocalPlayer:GetMouse()
+    
+    
+    
+    mouse.KeyDown:Connect(function(value)
+    if value == cframeSpheedhotkeyXd1 then
+    if DaHoodSettings.SilentAim == true then
+        DaHoodSettings.SilentAim = false
+    else
+        DaHoodSettings.SilentAim = true
+    end
+    end
     end)
-end)
