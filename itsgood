@@ -59,7 +59,7 @@ RunService:BindToRenderStep("AimLock", 0, function()
     end
     end)
 
-    local cframeSpheedhotkeyXd1 = "l" -- toggle key
+    local cframeSpheedhotkeyXd1 = "x" -- toggle key
     local mouse = game.Players.LocalPlayer:GetMouse()
     
     
